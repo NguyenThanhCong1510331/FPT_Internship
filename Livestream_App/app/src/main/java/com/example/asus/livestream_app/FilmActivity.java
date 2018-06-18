@@ -73,7 +73,7 @@ public class FilmActivity extends AppCompatActivity {
         imgPlay.setBackgroundColor(getResources().getColor(R.color.focusButtonPlay,null));
     }
 
-    private class GetJobs extends AsyncTask<Void, Void, Void> {
+    private class getDataFilm extends AsyncTask<Void, Void, Void> {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
