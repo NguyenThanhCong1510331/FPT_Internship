@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="titleName">#FFFFFF</color>
+    <color name="colordescription">#E0E0E0</color>
+    <color name="focusButtonPlay">#FFFF9800</color>
+    <color name="unFocusButtonPlay">#FF212121</color>
+    <color name="bgApp">#E6000000</color>
+    <color name="notFocusText">#9E9E9E</color>
 </resources>

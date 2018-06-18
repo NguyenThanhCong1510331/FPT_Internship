@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Livestream_App</string>
+    <string name="imdb">IMDB:</string>
+    <string name="country">Quốc Gia:</string>
+    <string name="duration">Thời Lượng:</string>
+    <string name="genre">Thể Loại:</string>
+    <string name="director">Đạo Diễn:</string>
+    <string name="actor">Diễn Viên:</string>
+    <string name="play">XEM</string>
 </resources>
