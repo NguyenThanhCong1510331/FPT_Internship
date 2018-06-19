@@ -39,6 +39,9 @@ public class ListEpisodeAdapter extends RecyclerView.Adapter<ListEpisodeAdapter.
         holder.rightArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //if(position==getItemCount()-1){
+
+               // }
               //  if(position<=)
                // holder.recyclerView.scrollToPosition(1);
             }
