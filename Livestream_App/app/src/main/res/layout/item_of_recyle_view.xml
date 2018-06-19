@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="110dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/arrow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@mipmap/arrow_1"
+        android:rotation="90"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/itemRecycleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/arrow1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <ImageView
+        android:layout_toEndOf="@+id/itemRecycleView"
+        android:id="@+id/arrow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@mipmap/arrow_1"
+        android:rotation="-90"/>
+
+</RelativeLayout>

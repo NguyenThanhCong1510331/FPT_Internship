@@ -3,28 +3,27 @@ package com.example.asus.livestream_app;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 /**
- * Created by Welcome on 6/18/2018.
+ * Created by Welcome on 6/19/2018.
  */
 
-public class FilmActivity extends AppCompatActivity {
+public class TVSeriesActivity extends AppCompatActivity{
 
-    private String TAG=FilmActivity.class.getName();
+    private String TAG=MovieActivity.class.getName();
     private static String url="";
-    TextView txtImdb,txtDuration,txtCountry,txtGenre,txtDirector,txtActor,txtPlay,descriptionFilm;
-    ImageView imgPlay;
+    TextView txtImdb,txtDuration,txtCountry,txtGenre,txtDirector,txtActor,descriptionFilm;
+    RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_popup);
+        setContentView(R.layout.activity_popup_episode);
 
         txtImdb=(TextView)findViewById(R.id.txtIMDB);
         txtDuration=(TextView)findViewById(R.id.txtduration);
@@ -32,8 +31,8 @@ public class FilmActivity extends AppCompatActivity {
         txtDirector=(TextView)findViewById(R.id.txtdirector);
         txtActor=(TextView)findViewById(R.id.txtactor);
         txtGenre=(TextView)findViewById(R.id.txtgenre);
-        txtPlay=(TextView)findViewById(R.id.txtPlay);
-        imgPlay=(ImageView)findViewById(R.id.imgPlay);
+        recyclerView=(RecyclerView)findViewById(R.id.recycleView);
+
         descriptionFilm=(TextView)findViewById(R.id.descriptionFilm);
         descriptionFilm.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -63,14 +62,12 @@ public class FilmActivity extends AppCompatActivity {
 
     private void setFocusDescription(){
         descriptionFilm.setMovementMethod(new ScrollingMovementMethod());
-        txtPlay.setTextColor(getResources().getColor(R.color.notFocusText,null));
-        imgPlay.setBackgroundColor(getResources().getColor(R.color.unFocusButtonPlay,null));
+
     }
 
     private void setUnFocusDescription(){
         descriptionFilm.setMovementMethod(null);
-        txtPlay.setTextColor(getResources().getColor(R.color.titleName,null));
-        imgPlay.setBackgroundColor(getResources().getColor(R.color.focusButtonPlay,null));
+
     }
 
     private class getDataFilm extends AsyncTask<Void, Void, Void> {
@@ -132,7 +129,6 @@ public class FilmActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute(aVoid);
-
 
         }
 

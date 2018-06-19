@@ -7,4 +7,5 @@
     <string name="director">Đạo Diễn:</string>
     <string name="actor">Diễn Viên:</string>
     <string name="play">XEM</string>
+    <string name="chooseEp">Chọn tập:</string>
 </resources>

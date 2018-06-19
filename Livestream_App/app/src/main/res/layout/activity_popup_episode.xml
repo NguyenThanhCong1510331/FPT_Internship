@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgApp">
+
+    <ImageView
+        android:id="@+id/bgFilm"
+        android:layout_width="318dp"
+        android:layout_height="465dp"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="128dp"/>
+
+    <RelativeLayout
+        android:layout_width="646dp"
+        android:layout_height="465dp"
+        android:layout_alignBaseline="@+id/bgFilm"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="128dp"
+        android:layout_toEndOf="@+id/bgFilm">
+
+        <TextView
+            android:id="@+id/nameFilm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:textColor="@color/titleName"
+            android:textStyle="bold"
+            android:text="Ninja Tý Hon (2012)"/>
+
+        <RelativeLayout
+            android:id="@+id/relLayout1"
+            android:layout_width="142dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameFilm"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/IMDB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="@string/imdb"
+                android:textColor="@color/colordescription"
+                android:textStyle="bold"
+                android:gravity="left"
+
+                />
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="@string/country"
+                android:textColor="@color/colordescription"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_below="@+id/IMDB"
+                android:layout_marginTop="4dp"
+                />
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="@string/duration"
+                android:textColor="@color/colordescription"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_below="@+id/country"
+                android:layout_marginTop="4dp"
+                />
+            <TextView
+                android:id="@+id/genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="@string/genre"
+                android:textColor="@color/colordescription"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_below="@+id/duration"
+                android:layout_marginTop="4dp"
+                />
+
+            <TextView
+                android:id="@+id/director"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="@string/director"
+                android:textColor="@color/colordescription"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_below="@+id/genre"
+                android:layout_marginTop="4dp"
+                />
+
+            <TextView
+                android:id="@+id/actor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="@string/actor"
+                android:textColor="@color/colordescription"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_below="@+id/director"
+                android:layout_marginTop="4dp"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/relLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/relLayout1"
+            android:layout_alignBaseline="@+id/relLayout1"
+            android:layout_marginStart="20dp"
+            >
+            <TextView
+                android:id="@+id/txtIMDB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="@string/imdb"
+                android:textColor="@color/colordescription"
+
+                android:gravity="left"
+
+                />
+            <TextView
+                android:id="@+id/txtcountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="@string/country"
+                android:textColor="@color/colordescription"
+
+                android:gravity="left"
+                android:layout_below="@+id/txtIMDB"
+                android:layout_marginTop="4dp"
+                />
+            <TextView
+                android:id="@+id/txtduration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="@string/duration"
+                android:textColor="@color/colordescription"
+
+                android:gravity="left"
+                android:layout_below="@+id/txtcountry"
+                android:layout_marginTop="4dp"
+                />
+            <TextView
+                android:id="@+id/txtgenre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="@string/genre"
+                android:textColor="@color/colordescription"
+
+                android:gravity="left"
+                android:layout_below="@+id/txtduration"
+                android:layout_marginTop="4dp"
+                />
+
+            <TextView
+                android:id="@+id/txtdirector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="@string/director"
+                android:textColor="@color/colordescription"
+
+                android:gravity="left"
+                android:layout_below="@+id/txtgenre"
+                android:layout_marginTop="4dp"
+                />
+
+            <TextView
+                android:id="@+id/txtactor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="@string/actor"
+                android:textColor="@color/colordescription"
+                android:gravity="left"
+                android:layout_below="@+id/txtdirector"
+                android:layout_marginTop="4dp"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/descriptionFilm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:layout_below="@+id/relLayout1"
+            android:layout_marginTop="20dp"
+            android:scrollbars="vertical"
+            android:textSize="20dp"
+
+            android:textColor="@color/colordescription"
+
+            />
+
+        <TextView
+            android:id="@+id/titleSoTap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="330dp"
+            android:text="@string/chooseEp"
+            android:textColor="@color/titleName"
+            android:textSize="20dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleView"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/titleSoTap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
