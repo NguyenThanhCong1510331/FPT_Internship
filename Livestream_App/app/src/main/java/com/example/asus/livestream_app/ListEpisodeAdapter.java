@@ -2,6 +2,7 @@ package com.example.asus.livestream_app;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 
 public class ListEpisodeAdapter extends RecyclerView.Adapter<ListEpisodeAdapter.ViewHolder> {
 
+    Context context;
     public ListEpisodeAdapter(Context context, ArrayList<?> lstFilm){
 
     }
@@ -32,7 +34,8 @@ public class ListEpisodeAdapter extends RecyclerView.Adapter<ListEpisodeAdapter.
             @Override
             public void onClick(View v) {
                 if(position>=2){
-
+                    GridLayoutManager gridLayoutManager=new GridLayoutManager(context,5);
+                    holder.recyclerView.setLayoutManager(gridLayoutManager);
                 }
             }
         });
@@ -41,9 +44,6 @@ public class ListEpisodeAdapter extends RecyclerView.Adapter<ListEpisodeAdapter.
             public void onClick(View v) {
                 //if(position==getItemCount()-1){
 
-               // }
-              //  if(position<=)
-               // holder.recyclerView.scrollToPosition(1);
             }
         });
     }
