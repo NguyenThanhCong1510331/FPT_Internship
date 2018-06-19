@@ -10,5 +10,6 @@
     <color name="bgApp">#E6000000</color>
     <color name="notFocusText">#9E9E9E</color>
     <color name="ovalShapeNotFocus">#33ffffff</color>
+    <color name="nextBtn">#EEEEEE</color>
 
 </resources>

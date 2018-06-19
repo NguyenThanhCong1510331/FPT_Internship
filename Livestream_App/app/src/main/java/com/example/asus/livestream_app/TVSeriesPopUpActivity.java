@@ -3,23 +3,27 @@ package com.example.asus.livestream_app;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 /**
  * Created by Welcome on 6/19/2018.
  */
 
-public class TVSeriesActivity extends AppCompatActivity{
+public class TVSeriesPopUpActivity extends AppCompatActivity{
 
-    private String TAG=MovieActivity.class.getName();
+    private String TAG=MoviePopUpActivity.class.getName();
     private static String url="";
     TextView txtImdb,txtDuration,txtCountry,txtGenre,txtDirector,txtActor,descriptionFilm;
     RecyclerView recyclerView;
+    ArrayList<ArrayList<String>> lst=new ArrayList<>();
+    ArrayList<String> lstString=new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +38,8 @@ public class TVSeriesActivity extends AppCompatActivity{
         recyclerView=(RecyclerView)findViewById(R.id.recycleView);
 
         descriptionFilm=(TextView)findViewById(R.id.descriptionFilm);
+
+        addData();
         descriptionFilm.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
@@ -45,6 +51,11 @@ public class TVSeriesActivity extends AppCompatActivity{
                 }
             }
         });
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(layoutManager);
+        ListEpisodeAdapter listEpisodeAdapter=new ListEpisodeAdapter(TVSeriesPopUpActivity.this, lst);
+        recyclerView.setAdapter(listEpisodeAdapter);
      /*   descriptionFilm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +69,18 @@ public class TVSeriesActivity extends AppCompatActivity{
                 }
             }
         });*/
+    }
+
+    private void addData(){
+        for(int i=0;i<12;i++){
+            lstString.add("Tập "+ i);
+        }
+        lst.add(lstString);
+        lstString.clear();
+        for(int i=12;i<24;i++){
+            lstString.add("Tập "+ i);
+        }
+        lst.add(lstString);
     }
 
     private void setFocusDescription(){

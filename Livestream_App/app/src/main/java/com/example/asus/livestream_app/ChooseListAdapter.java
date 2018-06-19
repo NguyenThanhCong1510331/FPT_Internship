@@ -22,8 +22,10 @@ import java.util.ArrayList;
 public class ChooseListAdapter extends RecyclerView.Adapter<ChooseListAdapter.ViewHolder> {
 
     static Context context;
-    public ChooseListAdapter(Context context, ArrayList<?> lst){
-
+    ArrayList<String> lst;
+    public ChooseListAdapter(Context context, ArrayList<String> lst){
+            this.context=context;
+            this.lst=new ArrayList<>(lst);
     }
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -34,7 +36,8 @@ public class ChooseListAdapter extends RecyclerView.Adapter<ChooseListAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
-        holder.bgOfItem.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        holder.bgOfItem.setText(lst.get(position));
+       /* holder.bgOfItem.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if(hasFocus){
@@ -46,22 +49,21 @@ public class ChooseListAdapter extends RecyclerView.Adapter<ChooseListAdapter.Vi
                     holder.txtItem.setTextColor(context.getResources().getColor(R.color.colordescription,null));
                 }
             }
-        });
+        });*/
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return lst.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         Button bgOfItem;
-        TextView txtItem;
 
         public ViewHolder(View itemView) {
             super(itemView);
             bgOfItem=(Button)itemView.findViewById(R.id.bgOfItem);
-            txtItem=(TextView) itemView.findViewById(R.id.tapFilm);
+
         }
     }
 }

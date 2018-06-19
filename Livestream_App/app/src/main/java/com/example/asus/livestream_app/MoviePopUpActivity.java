@@ -14,12 +14,12 @@ import android.widget.TextView;
  * Created by Welcome on 6/18/2018.
  */
 
-public class MovieActivity extends AppCompatActivity {
+public class MoviePopUpActivity extends AppCompatActivity {
 
-    private String TAG=MovieActivity.class.getName();
+    private String TAG=MoviePopUpActivity.class.getName();
     private static String url="";
     TextView txtImdb,txtDuration,txtCountry,txtGenre,txtDirector,txtActor,txtPlay,descriptionFilm;
-    ImageView imgPlay;
+    ImageView imgPlay,Play;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +32,7 @@ public class MovieActivity extends AppCompatActivity {
         txtActor=(TextView)findViewById(R.id.txtactor);
         txtGenre=(TextView)findViewById(R.id.txtgenre);
         txtPlay=(TextView)findViewById(R.id.txtPlay);
+        Play=(ImageView)findViewById(R.id.Play);
         imgPlay=(ImageView)findViewById(R.id.imgPlay);
         descriptionFilm=(TextView)findViewById(R.id.descriptionFilm);
         descriptionFilm.setOnFocusChangeListener(new View.OnFocusChangeListener() {
@@ -43,6 +44,24 @@ public class MovieActivity extends AppCompatActivity {
                 else{
                     setUnFocusDescription();
                 }
+            }
+        });
+        Play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        imgPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        txtPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
      /*   descriptionFilm.setOnClickListener(new View.OnClickListener() {

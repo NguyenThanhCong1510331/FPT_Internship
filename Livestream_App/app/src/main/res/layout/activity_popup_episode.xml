@@ -10,7 +10,8 @@
         android:layout_width="318dp"
         android:layout_height="465dp"
         android:layout_marginStart="121dp"
-        android:layout_marginTop="128dp"/>
+        android:layout_marginTop="128dp"
+        android:background="@color/nextBtn"/>
 
     <RelativeLayout
         android:layout_width="646dp"
@@ -126,7 +127,6 @@
                 android:textSize="15dp"
                 android:text="@string/imdb"
                 android:textColor="@color/colordescription"
-
                 android:gravity="left"
 
                 />
@@ -204,7 +204,6 @@
             android:layout_marginTop="20dp"
             android:scrollbars="vertical"
             android:textSize="20dp"
-
             android:textColor="@color/colordescription"
 
             />
@@ -223,7 +222,7 @@
             android:layout_marginTop="10dp"
             android:layout_below="@+id/titleSoTap"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
         </android.support.v7.widget.RecyclerView>
 

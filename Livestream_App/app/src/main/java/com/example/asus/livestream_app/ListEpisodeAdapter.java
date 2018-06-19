@@ -18,8 +18,10 @@ import java.util.ArrayList;
 public class ListEpisodeAdapter extends RecyclerView.Adapter<ListEpisodeAdapter.ViewHolder> {
 
     Context context;
-    public ListEpisodeAdapter(Context context, ArrayList<?> lstFilm){
-
+    ArrayList<ArrayList<String>> lst;
+    public ListEpisodeAdapter(Context context,   ArrayList<ArrayList<String>> lstFilm){
+            this.context=context;
+            this.lst=new ArrayList<>(lstFilm);
     }
     @Override
     public ListEpisodeAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -30,27 +32,35 @@ public class ListEpisodeAdapter extends RecyclerView.Adapter<ListEpisodeAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull final ListEpisodeAdapter.ViewHolder holder, final int position) {
-        holder.leftArrow.setOnClickListener(new View.OnClickListener() {
+
+        ArrayList<String> lstItem=lst.get(position);
+        GridLayoutManager gridLayoutManager=new GridLayoutManager(context,6);
+        holder.recyclerView.setLayoutManager(gridLayoutManager);
+        ChooseListAdapter chooseListAdapter=new ChooseListAdapter(context,lstItem);
+        holder.recyclerView.setAdapter(chooseListAdapter);
+      /*  holder.leftArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(position>=2){
-                    GridLayoutManager gridLayoutManager=new GridLayoutManager(context,5);
-                    holder.recyclerView.setLayoutManager(gridLayoutManager);
+                    holder.itemView
                 }
             }
         });
         holder.rightArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //if(position==getItemCount()-1){
+               if(position<lst.size()-1){
+                   GridLayoutManager gridLayoutManager=new GridLayoutManager(context,5);
+                   holder.recyclerView.setLayoutManager(gridLayoutManager);
+               }
 
             }
-        });
+        });*/
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return lst.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

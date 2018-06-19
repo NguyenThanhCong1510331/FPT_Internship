@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgApp">
+
+    <RelativeLayout
+        android:layout_width="550dp"
+        android:layout_height="250dp"
+        android:id="@+id/relLayout1"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/warning"
+            android:textColor="@color/colordescription"
+            android:textSize="28dp" />
+
+        <TextView
+            android:id="@+id/warning1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/caution"
+            android:layout_below="@+id/warning"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/notFocusText"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/warning2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/FPT"
+            android:layout_below="@+id/warning1"
+            android:layout_marginTop="9dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/notFocusText"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/warning3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/noPermission"
+            android:layout_below="@+id/warning1"
+            android:layout_toEndOf= "@+id/warning2"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/notFocusText"
+            android:layout_marginTop="9dp"
+            android:textSize="20dp"
+           />
+
+        <Button
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/warning3"
+            android:id="@+id/btnNext"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFF9800"
+            android:layout_marginTop="80dp"
+            android:text="@string/contine"
+            android:textColor="@color/nextBtn"
+            android:textSize="22dp"
+            />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@mipmap/home_icon"/>
+
+</RelativeLayout>

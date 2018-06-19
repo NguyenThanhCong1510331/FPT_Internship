@@ -8,4 +8,9 @@
     <string name="actor">Diễn Viên:</string>
     <string name="play">XEM</string>
     <string name="chooseEp">Chọn tập:</string>
+    <string name="warning">Cảnh báo</string>
+    <string name="caution">Các nội dung được chia sẻ từ nguồn Internet,</string>
+    <string name="FPT">FPT Telecom</string>
+    <string name="noPermission">không chịu trách nhiệm về các nội dung này</string>
+    <string name="contine">Tiếp tục</string>
 </resources>
